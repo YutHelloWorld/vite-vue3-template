@@ -22,11 +22,17 @@
 
 <script setup lang="ts">
 import camp from '@/assets/svg/camp.svg?component';
-import { getPostsById } from '@/api/posts';
-
-getPostsById('1').then((data) => {
-  console.log(data?.title);
+import { getPostsById, getPosts } from '@/api/posts';
+import http from '@/http';
+// 请求示例
+getPosts().then((posts) => {
+  http.setHeader({ Authorization: 'Bearer 123456' });
+  console.log(posts[0]);
+  getPostsById('1').then((data) => {
+    console.log(data?.title);
+  });
 });
+
 const { t } = useI18n();
 ElMessage.success({ message: 'welcome', duration: 1000 });
 const featureList = [

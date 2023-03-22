@@ -97,6 +97,29 @@ class Request {
       this.abortControllerMap.delete(urlItem);
     });
   }
+
+  setHeader<K>(headers: K): void {
+    if (!this.instance) {
+      return;
+    }
+    Object.assign(this.instance.defaults.headers.common, headers);
+  }
+
+  get<T>(config: RequestConfig<T>): Promise<T> {
+    return this.request({ ...config, method: 'GET' });
+  }
+
+  post<T>(config: RequestConfig<T>): Promise<T> {
+    return this.request({ ...config, method: 'POST' });
+  }
+
+  put<T>(config: RequestConfig<T>): Promise<T> {
+    return this.request({ ...config, method: 'PUT' });
+  }
+
+  delete<T>(config: RequestConfig<T>): Promise<T> {
+    return this.request({ ...config, method: 'DELETE' });
+  }
 }
 
 export default Request;

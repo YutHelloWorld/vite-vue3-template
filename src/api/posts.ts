@@ -1,15 +1,15 @@
 import http from '@/http';
 
-interface PostsData {
+interface SinglePostsData {
   userId: number;
   id: number;
   title: string;
   completed: boolean;
 }
+
 export const getPostsById = (id: string) => {
-  return http<undefined, PostsData>({
+  return http.get<SinglePostsData>({
     url: `/posts/${id}`,
-    method: 'GET',
     interceptors: {
       requestInterceptors(config) {
         console.log('接口请求');
@@ -22,6 +22,16 @@ export const getPostsById = (id: string) => {
     },
   });
 };
+interface Posts {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
+export const getPosts = () => {
+  return http.get<Posts[]>({ url: '/posts' });
+};
 export default {
   getPostsById,
+  getPosts,
 };
