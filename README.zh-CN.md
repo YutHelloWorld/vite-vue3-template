@@ -1,5 +1,5 @@
 <p align='center'>
-<a href="https://github.com/YutHelloWorld/vite-vue3-template/blob/master/README.md">English</a> | <b>简体中文</b>
+<a href="https://github.com/YutHelloWorld/vite-vue3-template/blob/main/README.md">English</a> | <b>简体中文</b>
 </p>
 
 <br>
