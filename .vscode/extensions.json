@@ -6,7 +6,7 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "EditorConfig.EditorConfig",
-    "voorjaar.windicss-intellisense",
+    "bradlc.vscode-tailwindcss",
     "csstools.postcss",
     "MariusAlchimavicius.json-to-ts"
   ]

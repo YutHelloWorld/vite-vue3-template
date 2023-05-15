@@ -41,4 +41,7 @@ const toggleLocales = () => {
 .icon-footer {
   font-size: 1.3em;
 }
+.icon-btn {
+  display: inline-block;
+}
 </style>

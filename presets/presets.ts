@@ -6,14 +6,11 @@ import Components from 'unplugin-vue-components/vite';
 import Icons from 'unplugin-icons/vite';
 import IconsResolver from 'unplugin-icons/resolver';
 import { ElementPlusResolver, VueUseComponentsResolver } from 'unplugin-vue-components/resolvers';
-import WindiCSS from 'vite-plugin-windicss';
 import Markdown from 'vite-plugin-vue-markdown';
 import Prism from 'markdown-it-prism';
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 import LinkAttributes from 'markdown-it-link-attributes';
 import { resolve } from 'path';
-
-const defaultClasses = 'prose prose-sm m-auto text-left';
 
 export default () => {
   return [
@@ -49,11 +46,7 @@ export default () => {
     VueI18nPlugin({
       include: [resolve(__dirname, '../locales/**')],
     }),
-    WindiCSS({
-      safelist: defaultClasses,
-    }),
     Markdown({
-      wrapperClasses: defaultClasses,
       headEnabled: false,
       markdownItSetup(md) {
         // https://prismjs.com/
