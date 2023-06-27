@@ -27,8 +27,7 @@
 
 ### UI 框架
 
-- [Windi CSS](https://github.com/windicss/windicss) (按需的 [TailwindCSS](https://tailwindcss.com/)) - 更轻，更快和和一系列额外的特性!
-  - [Windi CSS Typography](https://windicss.org/plugins/official/typography.html)
+
 - [Element Plus](https://github.com/element-plus/element-plus) - 基于 Vue.js 3 的强大 UI 库
 
 ### Icons
